@@ -1,0 +1,6 @@
+{
+  "version": 0.21,
+  "validExtensions": "html, js, css, png, jpg, svg, jpeg, gif, eot, otf, ttf, woff, mp4",
+  "validRootExtensions": "html, js",
+  "validFolders": "css, images, script, scripts, js, img, styles, videos, video"
+}

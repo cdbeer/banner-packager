@@ -1,0 +1,50 @@
+{
+  "name": "banner-packager",
+  "version": "1.0.0",
+  "author": "Chris Beer",
+"description":"Desktop application that creates zip packages from drag-and-dropped HTML5 banner source folders. Zips are uploadable to ad servers such as DoubleClick. Customizable settings define which files and folders are packaged.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "dependencies": {
+    "angular": "^1.6.6",
+    "archiver": "^2.1.0",
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
+    "ncp": "^2.0.0",
+    "source-map-support": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.6.36",
+    "@types/electron": "^1.6.10",
+    "@types/node": "^8.0.47",
+    "devtron": "^1.4.0",
+    "electron": "1.7.9",
+    "electron-builder": "^19.42.1",
+    "electron-webpack": "1.10.1",
+    "electron-webpack-ts": "^1.2.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1"
+  },
+
+  "electronWebpack": {
+
+    "title": "Banner Packager",
+
+
+    "main": {
+      "webpackConfig": "webpack.main.additions.js"
+    },
+    "renderer": {
+      "webpackConfig": "webpack.renderer.additions.js"
+    }
+
+  }
+
+}

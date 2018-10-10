@@ -1,0 +1,30 @@
+<div class="container-fluid ">
+
+	<div class="input-group">
+		<span class="input-group-addon list-label">Valid Folders</span>
+		<input type="text" class="form-control" ng-model="appSettings.validFolders"/>
+	</div>
+
+	<div class="input-group">
+		<span class="input-group-addon list-label">Valid Extensions</span>
+		<input type="text" class="form-control" ng-model="appSettings.validExtensions"/>
+	</div>
+	<div class="input-group">
+		<span class="input-group-addon list-label">Extensions in Root</span>
+		<input type="text" class="form-control" ng-model="appSettings.validRootExtensions"/>
+	</div>
+
+	<div class=" drop-target-wrapper" style="width:100%">
+		<div class="bg">
+			<div>Drop banner folders here</div>
+		</div>
+		<div class="drop-target-folders drop-target " id="drop-target" banners-model="BannersModel">
+			<div class="" ng-repeat="banner in bannersModel.banners">{{banner.name}} {{banner.filesSize>0?('(size: '+(banner.filesSize/1000 | number:1)+'kb, '):''}} {{banner.zipSize>0?('compressed: '+(banner.zipSize/1000 | number:1)+'kb)'):''}}
+			</div>
+		</div>
+	</div>
+	<div class=" button-bar-bottom">
+		<button class="btn " ng-class="{disabled:bannersModel.banners.length==0 || packaging==true}" blur-me ng-click="clearBanners()">Clear</button>
+		<button class="btn btn-primary package-button" ng-class="{disabled:bannersModel.banners.length==0 || packaging==true}" blur-me id="reload-game-button" ng-click="packageButtonClicked()">Package</button>
+	</div>
+</div>

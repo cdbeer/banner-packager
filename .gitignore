@@ -1,0 +1,9 @@
+.DS_Store
+dist/mac
+dist/main
+dist/renderer
+node_modules/
+.idea/
+thumbs.db
+yarn-error.log
+

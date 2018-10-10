@@ -1,0 +1,144 @@
+@import "customVariables";
+//@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//@font-face {
+//  font-family: 'Conv_AvenirNextLTPro-Bold';
+//  src: url('AvenirNextLTPro-Bold.eot');
+//  src: local('☺'), url('AvenirNextLTPro-Bold.woff') format('woff'), url('AvenirNextLTPro-Bold.ttf') format('truetype'), url('AvenirNextLTPro-Bold.svg') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Conv_AvenirNextLTPro-HeavyCn';
+//  src: url('AvenirNextLTPro-HeavyCn.eot');
+//  src: local('☺'), url('AvenirNextLTPro-HeavyCn.woff') format('woff'), url('AvenirNextLTPro-HeavyCn.ttf') format('truetype'), url('AvenirNextLTPro-HeavyCn.svg') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+
+
+::-webkit-scrollbar {
+  width:9px;
+
+}
+
+::-webkit-scrollbar-track {
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  background:rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  background:rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:rgba(0,0,0,0.4);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background:rgba(0,0,0,0.05);
+}
+
+html {
+  height: 100%;
+  padding-top:12px;
+  padding-bottom:12px;
+}
+body {
+  height: 100%;
+  min-height: 100%;
+
+  //background:orange;
+}
+.container-fluid {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.list-label {
+  min-width: 165px;
+  text-align: left;
+}
+.input-group-upload {
+  padding-bottom: 15px;
+}
+.drop-target-folders {
+  background: white;
+  border: 2px dashed rosybrown;
+
+}
+.drop-target-wrapper {
+  flex-grow: 1;
+//  min-height: 200px;
+  display: block;
+  position:relative;
+
+  .bg {
+	pointer-events: none;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//z-index: -1;
+
+	div {
+	  font-size: 20px;
+	  opacity: 0.25;
+	  // @include transform(rotate(45deg));
+	}
+
+  }
+
+
+  .drop-target {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: transparent;
+    position:absolute;
+    padding: 6px;
+    left:0px;
+    top:0px;
+    -webkit-scrollbar-appearance
+
+    div.label {
+      color: black;
+    }
+  }
+
+}
+
+.package-button {
+  float: right;
+}
+
+.button-bar-bottom {
+ // position: absolute;
+ // bottom: 0px;
+  // width:100%;
+}
+
+.container-fluid{
+  padding-left: 12px;
+  padding-right: 12px;
+}
