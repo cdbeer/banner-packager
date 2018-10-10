@@ -1,7 +1,5 @@
 
 
-### Development Scripts
-
 ```bash
 # run application in development mode
 yarn dev
